@@ -1,21 +1,19 @@
 {
-  "name": "ethereum-blocks",
+  "name": "zksync-era-blocks",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/ethereum-blocks",
-    "create-local": "graph create --node http://localhost:8020/ blocklytics/ethereum-blocks",
-    "remove-local": "graph remove --node http://localhost:8020/ blocklytics/ethereum-blocks",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 blocklytics/ethereum-blocks",
-    "deploy-rinkeby": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/rinkeby-blocks",
-    "deploy-kovan": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/kovan-blocks",
-    "deploy-goerli": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/goerli-blocks",
-    "deploy-ropsten": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/ropsten-blocks",
-    "deploy-poa": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ blocklytics/poa-core-blocks"
+    "b": "graph codegen && graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ graph-lending",
+    "create-local": "graph create --node http://localhost:8020/ graph-lending",
+    "remove-local": "graph remove --node http://localhost:8020/ graph-lending",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 graph-lending",
+    "test": "graph test"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "^0.17.1",
-    "@graphprotocol/graph-ts": "0.17.0"
-  }
+    "@graphprotocol/graph-cli": "0.51.0",
+    "@graphprotocol/graph-ts": "0.30.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
 }
