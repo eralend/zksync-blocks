@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: ConverterRegistryContract
-    network: zksync-era
+    network: telos
     source:
       address: "0x0ddff327ddf7fe838e3e63d02001ef23ad1ede8e"
       abi: ConverterRegistryContract
-      startBlock: 4422566
+      startBlock: 307631816
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
